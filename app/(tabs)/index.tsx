@@ -1,15 +1,27 @@
-import { StyleSheet } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { useState } from 'react';
 
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
+import { Stack } from 'expo-router';
+import HeaderBtn from '../../components/common/HeaderBtn';
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+    <SafeAreaView style={styles.container}>
+      <Stack.Screen
+        options={{
+          headerStyle: {
+            backgroundColor: 'blue',
+          },
+          headerShadowVisible: false,
+          headerLeft: () => <HeaderBtn />,
+        }} 
+      />
+      <Text style={styles.title}>Tab One 1</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
+    </SafeAreaView>
   );
 }
 
