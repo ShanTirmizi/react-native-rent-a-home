@@ -1,6 +1,5 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
 import { useState } from 'react';
-
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 import { Stack } from 'expo-router';
